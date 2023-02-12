@@ -28,6 +28,13 @@ id=ca7de14f-5bc8-48fd-93de-a19527b0459e name="Microsoft Virtual Disk Service Bas
     id=70193d5a-2607-449d-8a05-1e0c69330ee7 name="\\?\GLOBALROOT\Device\HarddiskVolume3" type=Simple status=Online health=Healthy fs=NTFS label="(null)" path=C:\ flags=Boot,CanExtend,CanShrink,PageFile,CrashDump,Installable,Fat32NotSupported,FatNotSupported,PermanentDismountSupported,RefsNotSupported
 ```
 
+## 知見
+
+- パックおよびボリュームの ID は、ツールの実行ごとに変化します。より正確には、サービスオブジェクトの異なるインスタンスから列挙した場合、ID が異なります。そのサービスオブジェクトをロードしたサービスローダーオブジェクトが同一でも同様です。
+- プロバイダの ID は一定のようです。少なくとも、ベーシックプロバイダとダイナミックプロバイダは、別の実行でも、それどころか別のマシンでも別のバージョンの Windows でも一定のようです。
+- パックの名前は NULL になることがあります。
+- プロバイダおよびボリュームの名前は NULL になることはないようです。また、ユニークであるようです。
+
 ## 著作権表示
 
 Copyright © 2023 梅澤威志

@@ -28,6 +28,13 @@ id=ca7de14f-5bc8-48fd-93de-a19527b0459e name="Microsoft Virtual Disk Service Bas
     id=70193d5a-2607-449d-8a05-1e0c69330ee7 name="\\?\GLOBALROOT\Device\HarddiskVolume3" type=Simple status=Online health=Healthy fs=NTFS label="(null)" path=C:\ flags=Boot,CanExtend,CanShrink,PageFile,CrashDump,Installable,Fat32NotSupported,FatNotSupported,PermanentDismountSupported,RefsNotSupported
 ```
 
+## Knowledge
+
+- The IDs of packs and volumes change between the tool's executions. More precisely, when enumerated from different instances of service objects, the IDs change even if the service objects are loaded by the same service loader object.
+- The IDs of providers seem consistent. At least, the IDs of Basic Provider and Dynamic Provider seem consistent between executions and moreover between different computers and different version of Windows.
+- The names of packs can be NULL.
+- The names of providers and volumes seem non-NULL and unique.
+
 ## Copyright Notice
 
 Copyright © 2023 UMEZAWA Takeshi
